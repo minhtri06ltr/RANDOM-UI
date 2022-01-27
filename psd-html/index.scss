@@ -1,0 +1,115 @@
+$primary-color: #ffc87a;
+$text-color: #1a2b5f;
+
+html {
+  font-size: 62.5%;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block; //can set margin
+  max-width: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: $text-color;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.wrapper {
+  max-width: 1448px;
+  margin: 0 auto; // center when screen larger than 1140px
+}
+.container {
+  margin: 0 auto;
+  max-width: 1210px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.header {
+  padding-top: 4rem;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+    &-item {
+      margin-left: 5rem;
+      &:last-child {
+        margin-left: 7rem;
+      }
+    }
+    &-link {
+      color: $text-color;
+      font-size: 1.6rem;
+      transition: all 0.25s linear;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $text-color;
+  &__text {
+    color: $primary-color;
+  }
+}
+.banner {
+  padding-top: 15rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+  &__heading {
+    font-weight: 700;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    .btn {
+      margin: 0rem 1rem;
+    }
+  }
+}
+.btn {
+  cursor: pointer;
+  outline: none;
+  font-size: 1.6rem;
+  text-align: center;
+  color: $text-color;
+  background-color: transparent;
+  display: inline-block;
+  border: 0;
+  padding: 1.5rem 3rem;
+  &--border {
+    border: 1px solid;
+  }
+  &--round {
+    border-radius: 5rem;
+  }
+  &--primary {
+    background-color: $primary-color;
+  }
+}
