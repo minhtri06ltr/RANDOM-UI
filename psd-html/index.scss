@@ -1,6 +1,6 @@
 $primary-color: #ffc87a;
 $text-color: #1a2b5f;
-
+$text-gray: #c6cad7;
 html {
   font-size: 62.5%;
 }
@@ -21,6 +21,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: $text-color;
   line-height: 1.4;
+  padding-bottom: 20rem;
   font-weight: 400;
 }
 .wrapper {
@@ -70,6 +71,7 @@ body {
   }
 }
 .banner {
+  padding-bottom: 15rem;
   padding-top: 15rem;
   max-width: 80rem;
   margin: 0 auto;
@@ -111,5 +113,66 @@ body {
   }
   &--primary {
     background-color: $primary-color;
+    &.has-shadow {
+      box-shadow: 0 10px 35px -5px $primary-color;
+    }
+  }
+}
+.cate {
+  &__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: calc(25% - 22.5px);
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 20px;
+    //title 2 row -> fix position
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+    &:first-child {
+      box-shadow: 0 20px 35px -5px rgba(31, 116, 72, 0.25);
+    }
+    &:nth-child(2) {
+      box-shadow: 0 20px 35px -5px rgba(226, 60, 70, 0.25);
+    }
+    &:nth-child(3) {
+      box-shadow: 0 20px 35px -5px rgba(147, 98, 123, 0.5);
+    }
+    &:last-child {
+      box-shadow: 0 20px 35px -5px rgba(136, 95, 70, 0.5);
+    }
+  }
+  &__img {
+    border-radius: inherit;
+    height: 23rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 4rem;
+  }
+  &__name,
+  &__details {
+    // title larger than one row -> ...
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__name {
+    font-size: 2.5rem;
+
+    margin-bottom: 2.5rem;
+  }
+  &__details {
+    font-size: 1.4rem;
+    color: $text-gray;
+    margin-top: auto; //pull all content to bottom
+    i {
+      margin-left: 1.5rem;
+    }
   }
 }
