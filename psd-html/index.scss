@@ -112,7 +112,26 @@ body {
     border-radius: 5rem;
   }
   &--primary {
-    background-color: $primary-color;
+    background: hsla(35, 73%, 77%, 1);
+
+    background: linear-gradient(
+      90deg,
+      hsla(35, 73%, 77%, 1) 40%,
+      hsla(35, 100%, 74%, 1) 54%
+    );
+
+    background: -moz-linear-gradient(
+      90deg,
+      hsla(35, 73%, 77%, 1) 40%,
+      hsla(35, 100%, 74%, 1) 54%
+    );
+
+    background: -webkit-linear-gradient(
+      90deg,
+      hsla(35, 73%, 77%, 1) 40%,
+      hsla(35, 100%, 74%, 1) 54%
+    );
+
     &.has-shadow {
       box-shadow: 0 10px 35px -5px $primary-color;
     }
@@ -174,5 +193,43 @@ body {
     i {
       margin-left: 1.5rem;
     }
+  }
+}
+.feature {
+  padding-top: 18rem;
+  &__item {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    & > div {
+      width: 50%;
+    }
+  }
+  &__info {
+    padding-left: 10rem;
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+  }
+  &__desc {
+    font-weight: 300;
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+  &-intro {
+    &__item {
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-decoration: underline;
+      font-size: 1.8rem;
+    }
+  }
+  &__img img {
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
   }
 }
