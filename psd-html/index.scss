@@ -21,7 +21,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: $text-color;
   line-height: 1.4;
-  padding-bottom: 20rem;
+
   font-weight: 400;
 }
 .wrapper {
@@ -71,7 +71,7 @@ body {
   }
 }
 .banner {
-  padding-bottom: 15rem;
+  padding-bottom: 12rem;
   padding-top: 15rem;
   max-width: 80rem;
   margin: 0 auto;
@@ -285,7 +285,7 @@ body {
       color: #ffa400;
       position: relative;
       z-index: 1;
-
+      box-shadow: 0 3px 58px -3px currentColor;
       &::after {
         content: "";
         width: 100%;
@@ -341,5 +341,134 @@ body {
   text-overflow: ellipsis;
   &--2 {
     -webkit-line-clamp: 2;
+  }
+}
+.partner {
+  margin-bottom: 19rem;
+  &__container {
+    padding-top: 18rem;
+    max-width: 82rem;
+  }
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 6rem;
+    padding-bottom: 9rem;
+    border-bottom: 2px solid;
+  }
+  &__list {
+    display: flex;
+    padding: 0rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+  }
+}
+.connect {
+  &__container {
+    text-align: center;
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+  &__desc {
+    margin-bottom: 6rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    span {
+      color: $primary-color;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 28.5rem;
+    width: 27rem;
+    border-radius: 30px;
+  }
+}
+.subscribe {
+  margin-bottom: 5rem;
+  margin-top: 19rem;
+  &__container {
+    display: flex;
+    border-bottom: 2px solid;
+    padding-bottom: 8rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    width: 50%;
+    max-width: 43rem;
+  }
+  &__info {
+    width: 50%;
+  }
+  &__form {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+    background-color: #f2f1f6;
+    input {
+      border: 0;
+      outline: none;
+      background-color: transparent;
+      font-size: 1.4em;
+      font-family: "Poppins";
+      flex-grow: 1;
+      padding: 0rem 1.5rem 0rem 0rem;
+    }
+    button {
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      outline: none;
+      cursor: pointer;
+      font-size: 1.6em;
+      font-family: "Poppins";
+      color: $text-color;
+    }
+  }
+  &__social {
+    i {
+      font-size: 3rem;
+      margin-left: 4rem;
+      cursor: pointer;
+    }
+  }
+}
+.footer {
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+  }
+  &__item {
+    width: 25%;
+  }
+  &__link {
+    color: $text-color;
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    width: fit-content; //fix width only cover content
   }
 }
