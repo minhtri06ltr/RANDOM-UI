@@ -445,4 +445,124 @@ body {
   width: fit-content;
 }
 
+@media screen and (max-width: 1023px) {
+  .banner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .banner__heading {
+    font-size: 5rem;
+  }
+  .banner__desc {
+    font-size: 1.6rem;
+  }
+  .banner__btns > .btn {
+    font-size: 1.4rem;
+  }
+
+  .cate__item {
+    width: calc(50% - 22.5px);
+    margin-bottom: 2.5rem;
+  }
+
+  .feature {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .feature__item {
+    flex-direction: column;
+  }
+  .feature__item:nth-child(even) {
+    flex-direction: column;
+  }
+  .feature__item:nth-child(even) .feature__info {
+    padding: 0;
+  }
+  .feature__item:nth-child(odd) .feature__info {
+    padding: 0;
+  }
+  .feature__img, .feature__info {
+    width: 100% !important;
+  }
+  .feature__img {
+    margin: 0 auto 5rem;
+  }
+
+  .partner {
+    margin-bottom: 10rem;
+  }
+  .partner__container {
+    padding-top: 0rem;
+  }
+
+  .feature {
+    padding-bottom: 0rem;
+  }
+  .feature__item {
+    margin-bottom: 10rem;
+  }
+
+  .connect__list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .connect__item {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__menu {
+    display: none;
+  }
+
+  .cate__item {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .partner {
+    margin-bottom: 5rem;
+  }
+  .partner__list {
+    flex-wrap: wrap;
+  }
+  .partner__item {
+    margin-bottom: 3rem;
+  }
+
+  .subscribe {
+    margin-top: 10rem;
+  }
+  .subscribe__container {
+    flex-direction: column;
+  }
+  .subscribe__title, .subscribe__info {
+    width: 100%;
+  }
+  .subscribe__title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .connect__desc {
+    margin-bottom: 4rem;
+  }
+
+  .footer:first-child {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .footer__container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 479px) {
+  .banner__heading {
+    font-size: 3rem;
+  }
+  .banner__btns > .btn {
+    font-size: 1.2rem;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
