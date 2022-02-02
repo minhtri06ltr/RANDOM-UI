@@ -43,6 +43,7 @@ body {
   }
   &__menu {
     &-list {
+       list-style-type: none;
       display: flex;
       align-items: center;
     }
