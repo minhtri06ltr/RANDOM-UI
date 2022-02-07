@@ -58,6 +58,9 @@ const Video = styled.video`
   bottom: 0;
   left: 10%;
   transform: translateY(-50%);
+  box-shadow: -1px 7px 38px -4px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: -1px 7px 38px -4px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: -1px 7px 38px -4px rgba(0, 0, 0, 0.67);
 `;
 const Icon = styled.img`
   width: 2rem;
@@ -92,7 +95,7 @@ const Service = () => {
             <Card />
             <Card />
           </CardContainer>
-          <Button onClick={() => setOpen(true)}>
+          <Button onClick={() => setOpen(!open)}>
             <Icon src="https://github.com/safak/youtube/blob/react-website/src/img/play.png?raw=true" />
             How it works
           </Button>
