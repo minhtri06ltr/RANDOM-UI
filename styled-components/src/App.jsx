@@ -6,6 +6,7 @@ import Intro from "./components/Intro";
 import Price from "./components/Price";
 import Service from "./components/Service";
 import Navbar from "./components/UI/Navbar";
+import { smallPhone } from "./responsive";
 
 const Container = styled.div`
   max-width: 1448px;
@@ -37,6 +38,7 @@ const ServiceBackground = styled.div`
   ${Shape}
   clip-path: polygon(30% 0%, 30% 100%, 0% 100%, 0% 0%);
   background-color: #f88497;
+  ${smallPhone({ display: "none" })}
 `;
 const PriceBackground = styled.div`
   ${Shape}

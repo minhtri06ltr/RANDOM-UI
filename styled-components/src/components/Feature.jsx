@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import app from "../assets/img/app.png";
+import { smallPhone } from "../responsive";
 import AnimatedBackground from "./AnimatedBackground";
 const Container = styled.div`
   display: flex;
+  ${smallPhone({ flexDirection: "column", padding: "3rem 2rem" })}
 `;
 const Left = styled.div`
   width: 50%;
+  ${smallPhone({ display: "none" })}
 `;
 const Img = styled.img`
   transform: scale(1.7);
@@ -18,9 +21,11 @@ const Right = styled.div`
   justify-content: center;
   margin-top: 12rem;
   z-index: 1;
+  ${smallPhone({ width: "100%" })}
 `;
 const Title = styled.span`
   font-size: 7rem;
+  ${smallPhone({ fontSize: "5rem" })}
 `;
 const SubTitle = styled.span`
   font-size: 2.4rem;

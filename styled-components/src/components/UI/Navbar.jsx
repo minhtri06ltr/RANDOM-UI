@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { smallPhone } from "../../responsive";
 const Container = styled.div`
   height: 6rem;
 
@@ -23,6 +23,7 @@ const Logo = styled.span`
 const Menu = styled.ul`
   display: flex;
   align-items: center;
+  ${smallPhone({ display: "none" })}
 `;
 const MenuItem = styled.li`
   font-size: 1.7rem;

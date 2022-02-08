@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { smallPhone } from "../responsive";
 import PriceCard from "./UI/PriceCard";
 
 const Container = styled.div`
@@ -6,6 +7,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  ${smallPhone({ flexDirection: "column" })}
 `;
 const Price = () => {
   return (

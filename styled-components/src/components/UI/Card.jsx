@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { smallPhone } from "../../responsive";
 
 const Container = styled.div`
   width: 15rem;
@@ -9,6 +10,7 @@ const Container = styled.div`
   box-shadow: 5px 1px 24px -4px rgba(0, 0, 0, 0.33);
   -webkit-box-shadow: 5px 1px 24px -4px rgba(0, 0, 0, 0.33);
   -moz-box-shadow: 5px 1px 24px -4px rgba(0, 0, 0, 0.33);
+  ${smallPhone({ width: "11rem" })}
 `;
 const Img = styled.img`
   width: 2rem;
@@ -16,6 +18,7 @@ const Img = styled.img`
 const Text = styled.span`
   margin-top: 1rem;
   text-align: center;
+  ${smallPhone({ fontSize: "1.4rem" })}
 `;
 
 const Card = () => {
