@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { useState } from "react";
+import { smallPhone } from "../responsive";
 
 const Container = styled.div`
   height: 49.5vh;
-
+  padding: 0 7rem;
   margin-bottom: 3rem;
+  ${smallPhone({ padding: "0 2rem" })}
 `;
 const Top = styled.div`
   display: flex;
@@ -46,27 +49,46 @@ const ReactItem = styled.div`
   }
   cursor: pointer;
 `;
-const Card = () => {
+const Card = ({ avatar, img, name, socket }) => {
+  const [liked, setLiked] = useState(false);
+  const handleReact = (type) => {
+    socket.emit("sendNotification", {
+      senderName: localStorage.getItem("username"),
+      receiverName: name,
+      type: type,
+    });
+  };
   return (
-    <Container>
-      <Top>
-        <Avatar src="https://images.unsplash.com/photo-1619443492967-f04dfa229b14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" />
-        <Name>John Keller</Name>
-      </Top>
-      <Center>
-        <Img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-      </Center>
-      <Bottom>
-        <React>
-          <ReactItem>
-            <i class="fa-regular fa-heart"></i>
-          </ReactItem>
-          <ReactItem>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </ReactItem>
-        </React>
-      </Bottom>
-    </Container>
+    <>
+      <Container>
+        <Top>
+          <Avatar src={avatar} />
+          <Name>{name}</Name>
+        </Top>
+        <Center>
+          <Img src={img} />
+        </Center>
+        <Bottom>
+          <React>
+            <ReactItem
+              onClick={() => {
+                setLiked(!liked);
+                !liked && handleReact("like");
+              }}
+            >
+              {liked ? (
+                <i className="fa-solid fa-heart" style={{ color: "red" }}></i>
+              ) : (
+                <i className="fa-regular fa-heart"></i>
+              )}
+            </ReactItem>
+            <ReactItem onClick={() => handleReact("share")}>
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </ReactItem>
+          </React>
+        </Bottom>
+      </Container>
+    </>
   );
 };
 

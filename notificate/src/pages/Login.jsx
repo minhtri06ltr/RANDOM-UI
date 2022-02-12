@@ -11,7 +11,7 @@ const Container = styled.div`
   background-size: cover;
   background-position: center;
 `;
-const Form = styled.div`
+const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,10 +43,15 @@ const Login = ({ setIsLogin }) => {
           onChange={(e) => setUsername(e.target.value)}
         />
         <Button
-          onClick={() => {
-            localStorage.setItem("username", username);
-            setUsername("");
-            setIsLogin(true);
+          onClick={(e) => {
+            e.preventDefault();
+            if (!username) {
+              alert("Please enter your name!");
+            } else {
+              localStorage.setItem("username", username);
+              setUsername("");
+              setIsLogin(true);
+            }
           }}
         >
           Join
