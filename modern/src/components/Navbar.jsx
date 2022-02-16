@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import logo from "../assets/img/logo.svg";
 import styled, { css } from "styled-components";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { ipad, maximun, pc, phone } from "../responsive";
+import { customCss, ipad, maximun, phone } from "../responsive";
 
 const Container = styled.div`
-  padding: 2rem 6rem;
+  padding: 2rem 6rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${pc({ padding: "2rem 4rem" })}
+  ${phone({ padding: "2rem 4rem" })}
 `;
 const Left = styled.div`
   display: flex;
@@ -32,12 +32,13 @@ const Link = styled.ul`
   ${ipad({ display: "none" })}
 `;
 const LinkItem = styled.a`
-  color: white;
+  color: var(--color-normal-text);
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   line-height: 25px;
   margin: 0 1rem;
+  font-family: var(--font-family);
   ${ipad({ display: "block", padding: "1rem 0", textAlign: "center" })}
 `;
 const Right = styled.div`
@@ -53,7 +54,7 @@ const Button = styled.button`
   font-size: 18px;
   font-family: var(--font-family);
   line-height: 25px;
-  color: white;
+  color: var(--color-normal-text);
   background-color: transparent;
   border: 0;
   outline: none;
@@ -67,6 +68,7 @@ const Button = styled.button`
     props.variant === "primary" &&
     css`
       padding: 1rem 2.5rem;
+      color: var(--color-lightner-text);
       border-radius: 5px;
       background-color: #ff4b20;
     `}
@@ -92,61 +94,10 @@ const Wrapper = styled.div`
   padding: 1rem 0;
   position: absolute;
   background-color: var(--color-footer);
-  -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
-    both;
-  animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  @-webkit-keyframes scale-up-ver-top {
-    0% {
-      -webkit-transform: scaleY(0.4);
-      transform: scaleY(0.4);
-      -webkit-transform-origin: 100% 0%;
-      transform-origin: 100% 0%;
-    }
-    100% {
-      -webkit-transform: scaleY(1);
-      transform: scaleY(1);
-      -webkit-transform-origin: 100% 0%;
-      transform-origin: 100% 0%;
-    }
-  }
-  @keyframes scale-up-ver-top {
-    0% {
-      -webkit-transform: scaleY(0.4);
-      transform: scaleY(0.4);
-      -webkit-transform-origin: 100% 0%;
-      transform-origin: 100% 0%;
-    }
-    100% {
-      -webkit-transform: scaleY(1);
-      transform: scaleY(1);
-      -webkit-transform-origin: 100% 0%;
-      transform-origin: 100% 0%;
-    }
-  }
+  ${customCss({ animation: "scale-up-ver-top" })}
 `;
 const Animation = styled.div`
-  -webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: rotate-90-cw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  @-webkit-keyframes rotate-90-cw {
-    0% {
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-    }
-  }
-  @keyframes rotate-90-cw {
-    0% {
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-    }
-  }
+  ${customCss({ animation: "rotate-90" })}
 `;
 const WrapperMenuButton = styled.div`
   ${maximun({ display: "none" })}
@@ -183,6 +134,7 @@ const Navbar = () => {
             <>
               <Animation>
                 <RiCloseLine
+                  style={{ cursor: "pointer" }}
                   color="#fff"
                   size={40}
                   onClick={() => setToggle(false)}
@@ -202,6 +154,7 @@ const Navbar = () => {
             </>
           ) : (
             <RiMenu3Line
+              style={{ cursor: "pointer" }}
               color="#fff"
               size={40}
               onClick={() => setToggle(true)}

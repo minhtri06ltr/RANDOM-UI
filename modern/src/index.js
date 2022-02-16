@@ -13,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
   --color-blog: #042c54;
   --color-text: #81AFDD;
   --color-subtext: #FF8A71;
+  --color-normal-text:#b4b8be;
+  --color-lightner-text:#fef6f4;
   }
 `;
 
