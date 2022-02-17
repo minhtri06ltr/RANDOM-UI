@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${phone({ padding: "2rem 4rem" })}
+  ${phone({ padding: "2rem 2rem" })}
 `;
 const Left = styled.div`
   display: flex;
@@ -32,6 +32,9 @@ const Link = styled.ul`
   ${ipad({ display: "none" })}
 `;
 const LinkItem = styled.a`
+  &:hover {
+    color: var(--color-lightner-text);
+  }
   color: var(--color-normal-text);
   font-size: 18px;
   font-weight: 500;
@@ -50,6 +53,9 @@ const WrapperButton = styled.div`
   display: flex;
 `;
 const Button = styled.button`
+  &:hover {
+    color: var(--color-lightner-text);
+  }
   font-weight: 500;
   font-size: 18px;
   font-family: var(--font-family);
@@ -67,6 +73,10 @@ const Button = styled.button`
   ${(props) =>
     props.variant === "primary" &&
     css`
+      transition: 0.3s linear;
+      &:hover {
+        background-color: #f75d37;
+      }
       padding: 1rem 2.5rem;
       color: var(--color-lightner-text);
       border-radius: 5px;
@@ -95,6 +105,7 @@ const Wrapper = styled.div`
   position: absolute;
   background-color: var(--color-footer);
   ${customCss({ animation: "scale-up-ver-top" })}
+  ${phone({ left: "-372%" })}
 `;
 const Animation = styled.div`
   ${customCss({ animation: "rotate-90" })}

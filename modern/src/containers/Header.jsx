@@ -6,7 +6,7 @@ import people from "../assets/img/people.png";
 
 const Container = styled.div`
   padding: 0 0 4rem 6rem;
-  ${phone({ padding: "0 4rem 2rem 4rem" })}
+  ${phone({ padding: "0 2rem 2rem 2rem" })}
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,6 @@ const Title = styled.h1`
   font-family: var(--font-family);
   font-weight: 800;
   ${ipad({ textAlign: "center" })}
-  ${phone({ fontSize: "74px" })}
 `;
 const Desc = styled.p`
   color: var(--color-text);
@@ -62,7 +61,7 @@ const Input = styled.input`
   outline: none;
   color: #2f5579;
   background-color: var(--color-blog);
-  ${phone({ marginBottom: "2rem" })}
+  ${phone({ marginBottom: "1rem", minHeight: "70px", alignCenter: "center" })}
 `;
 const Button = styled.button`
   min-height: 80px;
@@ -79,7 +78,7 @@ const Button = styled.button`
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   padding: 0 2rem;
-  ${phone({ borderRadius: "5px" })}
+  ${phone({ borderRadius: "5px", minHeight: "64px" })}
 `;
 const People = styled.img`
   width: 181.79px;
@@ -92,6 +91,12 @@ const Text = styled.span`
   line-height: 38px;
   margin-left: 0.8rem;
   font-weight: 500;
+  ${phone({
+    marginTop: "1rem",
+    fontSize: "14px",
+    lineHeight: "20px",
+    textAlign: "center",
+  })}
 `;
 const Right = styled.div`
   flex: 5;
@@ -107,7 +112,6 @@ const Img = styled.img`
   ${phone({ width: "100%" })}
 `;
 const Header = () => {
-  console.log(window.screen.availWidth);
   return (
     <Container id="home">
       <Left>
