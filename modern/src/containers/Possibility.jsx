@@ -40,7 +40,7 @@ const Right = styled.div`
 flex-direction:column;
 `;
 const Text = styled.span`
-  ${pc({ textAlign: "center" })};
+
 
   color: ${(props) =>
     props.color === "primary" ? "#00c2ff" : "var(--color-subtext)"};
@@ -73,7 +73,9 @@ const Desc = styled.p`
   font-family: var(--font-family);
   line-height: 30px;
 `;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  ${pc({ textAlign: "center" })};
+`;
 const Possibility = () => {
   return (
     <Container>
