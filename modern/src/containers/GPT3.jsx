@@ -67,7 +67,7 @@ const Title = styled.span`
   font-weight: 800;
 
   font-family: var(--font-family);
-  ${phone({ marginBottom: "2rem", textAlign: "center" })}
+  
 `;
 const Text = styled.span`
   color: var(--color-subtext);
@@ -88,6 +88,9 @@ const WrapperFeature = styled.div`
 `;
 const Wrapper = styled.div`
   flex: 1;
+  &:first-child{
+  ${phone({ marginBottom: "2rem", textAlign: "center" })}
+  }
   &:last-child {
     text-align: right;
   }
