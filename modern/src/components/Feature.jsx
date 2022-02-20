@@ -19,13 +19,13 @@ const Title = styled.span`
   font-weight: 800;
   font-family: var(--font-family);
   color: white;
-
+  width:50%;
   position: relative;
 
   line-height: 30px;
   letter-spacing: -0.04rem;
   font-size: 24px;
-  word-break: break-all;
+  word-break: break-word;
 
   margin-bottom: 3rem;
   ${(props) =>
