@@ -12,12 +12,13 @@ const Container = styled.div`
   border-radius: 10px;
   align-items: center;
 
-  ${phone({ margin: "4rem 2rem", padding: "4rem 2rem" })}
+  ${phone({ margin: "4rem 2rem", padding: "4rem 2rem",flexDirection:"column" })};
 `;
 const Left = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  ${phone({ width:"100%",textAlign:"center",marginBottom:"2rem" })};
 `;
 const Text = styled.span`
   color: black;
