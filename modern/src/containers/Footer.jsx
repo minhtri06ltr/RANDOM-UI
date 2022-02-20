@@ -52,7 +52,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  ${ipad({ justifyContent: "space-around", flexWrap: "wrap" })}
+  ${ipad({ justifyContent: "space-around", flexWrap: "wrap" })};
+  &:last-child{
+  ${ipad({ marginRight: "-8rem" })};
+  }
   &:first-child {
     flex-direction: column;
     padding-right: 14rem;
@@ -81,7 +84,7 @@ const List = styled.ul`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  ${ipad({ marginRight: "-8rem", alignItems: "center" })}
+  ${ipad({ marginRight: "8rem", alignItems: "center" })};
 `;
 const ListItem = styled.li`
   color: white;
@@ -92,7 +95,7 @@ const ListItem = styled.li`
   font-size: 14px;
   width: 100%;
   display: block;
-  ${ipad({ textAlign: "center",marginRight:"8rem" })}
+  ${ipad({ textAlign: "center" })};
   &:first-child {
     cursor: default;
     font-weight: 800;
