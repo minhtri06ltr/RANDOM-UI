@@ -14,7 +14,7 @@ const Top = styled.div`
   padding: 10rem 7rem;
   align-items: center;
   justify-content: center;
-  ${phone({ padding: "10rem 4rem" })}
+  ${phone({ padding: "10rem 0" })}
 `;
 const Title = styled.span`
   ${customCss({ color: "gradient-text" })};
