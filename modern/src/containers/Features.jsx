@@ -47,9 +47,11 @@ const Text = styled.span`
   font-size: 16px;
 
   font-family: var(--font-family);
-  ${ipad({ textAlign: "center" })};
+ 
 `;
-const WrapperText = styled.div``;
+const WrapperText = styled.div`
+ ${ipad({ textAlign: "center" })};
+`;
 const Features = () => {
   return (
     <Container>
