@@ -44,7 +44,9 @@ const Button = styled.button`
 const Center = styled.div`
   display: flex;
   margin-top: 2rem;
-  ${ipad({ flexDirection: "column" })}
+      justify-content: center;
+    align-items: flex-start;
+  ${ipad({ flexDirection: "column",alignItems:"center" })}
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -79,7 +81,7 @@ const List = styled.ul`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  ${ipad({ marginRight: "0", alignItems: "center" })}
+  ${ipad({ marginRight: "-8rem", alignItems: "center" })}
 `;
 const ListItem = styled.li`
   color: white;
@@ -90,7 +92,7 @@ const ListItem = styled.li`
   font-size: 14px;
   width: 100%;
   display: block;
-  ${ipad({ textAlign: "center" })}
+  ${ipad({ textAlign: "center",marginRight:"8rem" })}
   &:first-child {
     cursor: default;
     font-weight: 800;
