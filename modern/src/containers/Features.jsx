@@ -54,7 +54,7 @@ const WrapperText = styled.div`
 `;
 const Features = () => {
   return (
-    <Container>
+    <Container id="features">
       <Wrapper>
         <WrapperText>
           <Title>
