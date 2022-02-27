@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 
 const Blog = () => {
   return (
-    <Container>
+    <Container id="blog">
       <Title>A lot is happening,</Title>
       <Title>We are blogging about it</Title>
       <Wrapper>
